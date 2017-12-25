@@ -44,6 +44,12 @@ public class PhoneProcessingTest {
     }
 
     @Test
+    public void test_3() {
+        new PhoneProcessing("data/test_3.csv").processing();
+        assertReaders("data/test_3_result.csv", "output.csv");
+    }
+
+    @Test
     public void test_random_data() {
         new PhoneProcessing("data/random_1.csv").processing();
         assertReaders("data/random_1_result.csv", "output.csv");
